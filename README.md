@@ -67,12 +67,12 @@ uinput
 
 3. Import the part at the top of your manage.py script. If you are using a PS4 controller, import `PS4JoystickController` instead. Same applies in the next step.
     ```python
-    from donkeypart_ps3_controller import PS3JoystickController
+    import donkeypart_ps3_controller.part as ps4
     ```   
 
 4. Replace the controller part of your manage.py to use the JoysticController part.
     ```python
-    ctr = PS3JoystickController(
+    ctr = ps4.PS4JoystickController(
        throttle_scale=cfg.JOYSTICK_MAX_THROTTLE,
        steering_scale=cfg.JOYSTICK_STEERING_SCALE,
        auto_record_on_throttle=cfg.AUTO_RECORD_ON_THROTTLE
